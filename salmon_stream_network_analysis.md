@@ -39,7 +39,7 @@ This project models Pacific salmon spawning habitat across Vancouver Island, Bri
 ## Methods
 A stream network was derived from the Vancouver Island DEM using flow direction, flow accumulation, and a threshold of 1,000 accumulated cells. Stream segments were converted to routes and stored in a feature dataset. Topology rules were used to identify where dams and the island boundary intersect the stream routes, producing dam junction and ocean junction point layers. Slope gradient and stream order were extracted along routes using linear referencing and combined into a single overlay event table. A trace network was built to identify stream segments reachable from the ocean without crossing a dam. Finally, segments meeting salmon habitat criteria (1st–2nd order, gradient < 20%, ocean-accessible) were extracted as accessible habitat, with the inverse captured as inaccessible habitat.
 
-📄 *For a detailed breakdown of the methodology, [click here](methodology.md)*
+📄 *For a detailed breakdown of the methodology, [click here](https://github.com/AgnessChisale/salmon_stream_network_analysis/blob/main/methodology_project7.md)*
 
 ---
 
