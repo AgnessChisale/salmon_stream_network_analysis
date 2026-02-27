@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "salmon_stream_network_analysis.html",
+    "href": "salmon_stream_network_analysis.html",
+    "title": "Project 7: Salmon Stream Network Analysis on Vancouver Island",
+    "section": "",
+    "text": "Github Repo\n\n\nThis project models Pacific salmon spawning habitat across Vancouver Island, British Columbia, using hydrological analysis and network tracing in ArcGIS Pro. A stream network was derived from a Digital Elevation Model (DEM), dams were modelled as barriers, and linear referencing was used to characterize stream segments by slope gradient and stream order. The network was then traced from the ocean to identify which stream segments are accessible to salmon and which are blocked by dams, with results filtered against basic habitat requirements.\n\n\n\n\n\nDerive a stream network from a DEM using flow direction and flow accumulation\nModel dams as network barriers using topology\nIdentify ocean entry points for salmon using boundary intersection\nCharacterize stream segments by gradient and stream order using linear referencing\nTrace accessible and inaccessible salmon habitat through the network\n\n\n\n\n\nData | Layer | Description | Source | |——-|————-|——–| | vancouver_island_dem | 25 m DEM for Vancouver Island | UBC PostgreSQL Server (salmon database) | | vancouver_island_boundary | Vancouver Island boundary polygon | UBC PostgreSQL Server (salmon database) | | dams | Dam structures on Vancouver Island (polylines) | UBC PostgreSQL Server (salmon database) — original source: BC Government | | Conservation Units | Chinook, Chum, and Coho salmon conservation units | UBC PostgreSQL Server (salmon database) — original source: Oceans and Fisheries Canada |\nTools | Tool | Purpose | |——|———| | QGIS | Exporting the DEM from PostGIS to GeoTiff | | ArcGIS Pro (Hydrology toolset) | Flow direction, flow accumulation, stream derivation | | ArcGIS Pro (Network Analyst) | Trace network creation and upstream tracing | | ArcGIS Pro (Linear Referencing) | Overlaying stream attributes along routes |\n\n\n\n\nA stream network was derived from the Vancouver Island DEM using flow direction, flow accumulation, and a threshold of 1,000 accumulated cells. Stream segments were converted to routes and stored in a feature dataset. Topology rules were used to identify where dams and the island boundary intersect the stream routes, producing dam junction and ocean junction point layers. Slope gradient and stream order were extracted along routes using linear referencing and combined into a single overlay event table. A trace network was built to identify stream segments reachable from the ocean without crossing a dam. Finally, segments meeting salmon habitat criteria (1st–2nd order, gradient &lt; 20%, ocean-accessible) were extracted as accessible habitat, with the inverse captured as inaccessible habitat.\n📄 For a detailed breakdown of the methodology, click here\n\n\n\n\n\nsalmon_habitat_map_panel.pdf — Panel map for one conservation unit showing stream routes by reachability, dam barriers, accessible and inaccessible habitat segments, and a zoomed-in view of Lake Cowichan\nSummary table of total accessible streams, inaccessible streams, dam junctions, and ocean junctions\n\n\n\n\n\n\nDams on Vancouver Island significantly fragment the stream network, blocking salmon access to otherwise suitable spawning habitat\nAccessible habitat was concentrated in lower-order streams with gradients below 20%\nThe trace network revealed clear upstream limits imposed by dam locations across the conservation unit\n\n\n\n\n\n\nDeriving stream networks from a DEM using hydrology tools (Flow Direction, Flow Accumulation, Con, Stream Link, Stream Order, Stream to Feature)\nConverting stream features to routes using linear referencing\nApplying geodatabase topology rules to identify feature intersections\nModelling network barriers using dam and ocean junction points\nBuilding and tracing a network using the Trace Network toolset\nOverlaying route event tables using dynamic segmentation\nQuerying stream segments against multi-condition habitat criteria\nClipping network results to a conservation unit for final mapping"
+  },
+  {
+    "objectID": "salmon_stream_network_analysis.html#overview",
+    "href": "salmon_stream_network_analysis.html#overview",
+    "title": "Project 7: Salmon Stream Network Analysis on Vancouver Island",
+    "section": "",
+    "text": "This project models Pacific salmon spawning habitat across Vancouver Island, British Columbia, using hydrological analysis and network tracing in ArcGIS Pro. A stream network was derived from a Digital Elevation Model (DEM), dams were modelled as barriers, and linear referencing was used to characterize stream segments by slope gradient and stream order. The network was then traced from the ocean to identify which stream segments are accessible to salmon and which are blocked by dams, with results filtered against basic habitat requirements."
+  },
+  {
+    "objectID": "salmon_stream_network_analysis.html#objectives",
+    "href": "salmon_stream_network_analysis.html#objectives",
+    "title": "Project 7: Salmon Stream Network Analysis on Vancouver Island",
+    "section": "",
+    "text": "Derive a stream network from a DEM using flow direction and flow accumulation\nModel dams as network barriers using topology\nIdentify ocean entry points for salmon using boundary intersection\nCharacterize stream segments by gradient and stream order using linear referencing\nTrace accessible and inaccessible salmon habitat through the network"
+  },
+  {
+    "objectID": "salmon_stream_network_analysis.html#data-sources-tools",
+    "href": "salmon_stream_network_analysis.html#data-sources-tools",
+    "title": "Project 7: Salmon Stream Network Analysis on Vancouver Island",
+    "section": "",
+    "text": "Data | Layer | Description | Source | |——-|————-|——–| | vancouver_island_dem | 25 m DEM for Vancouver Island | UBC PostgreSQL Server (salmon database) | | vancouver_island_boundary | Vancouver Island boundary polygon | UBC PostgreSQL Server (salmon database) | | dams | Dam structures on Vancouver Island (polylines) | UBC PostgreSQL Server (salmon database) — original source: BC Government | | Conservation Units | Chinook, Chum, and Coho salmon conservation units | UBC PostgreSQL Server (salmon database) — original source: Oceans and Fisheries Canada |\nTools | Tool | Purpose | |——|———| | QGIS | Exporting the DEM from PostGIS to GeoTiff | | ArcGIS Pro (Hydrology toolset) | Flow direction, flow accumulation, stream derivation | | ArcGIS Pro (Network Analyst) | Trace network creation and upstream tracing | | ArcGIS Pro (Linear Referencing) | Overlaying stream attributes along routes |"
+  },
+  {
+    "objectID": "salmon_stream_network_analysis.html#methods",
+    "href": "salmon_stream_network_analysis.html#methods",
+    "title": "Project 7: Salmon Stream Network Analysis on Vancouver Island",
+    "section": "",
+    "text": "A stream network was derived from the Vancouver Island DEM using flow direction, flow accumulation, and a threshold of 1,000 accumulated cells. Stream segments were converted to routes and stored in a feature dataset. Topology rules were used to identify where dams and the island boundary intersect the stream routes, producing dam junction and ocean junction point layers. Slope gradient and stream order were extracted along routes using linear referencing and combined into a single overlay event table. A trace network was built to identify stream segments reachable from the ocean without crossing a dam. Finally, segments meeting salmon habitat criteria (1st–2nd order, gradient &lt; 20%, ocean-accessible) were extracted as accessible habitat, with the inverse captured as inaccessible habitat.\n📄 For a detailed breakdown of the methodology, click here"
+  },
+  {
+    "objectID": "salmon_stream_network_analysis.html#outputs",
+    "href": "salmon_stream_network_analysis.html#outputs",
+    "title": "Project 7: Salmon Stream Network Analysis on Vancouver Island",
+    "section": "",
+    "text": "salmon_habitat_map_panel.pdf — Panel map for one conservation unit showing stream routes by reachability, dam barriers, accessible and inaccessible habitat segments, and a zoomed-in view of Lake Cowichan\nSummary table of total accessible streams, inaccessible streams, dam junctions, and ocean junctions"
+  },
+  {
+    "objectID": "salmon_stream_network_analysis.html#key-findings",
+    "href": "salmon_stream_network_analysis.html#key-findings",
+    "title": "Project 7: Salmon Stream Network Analysis on Vancouver Island",
+    "section": "",
+    "text": "Dams on Vancouver Island significantly fragment the stream network, blocking salmon access to otherwise suitable spawning habitat\nAccessible habitat was concentrated in lower-order streams with gradients below 20%\nThe trace network revealed clear upstream limits imposed by dam locations across the conservation unit"
+  },
+  {
+    "objectID": "salmon_stream_network_analysis.html#skills-learned",
+    "href": "salmon_stream_network_analysis.html#skills-learned",
+    "title": "Project 7: Salmon Stream Network Analysis on Vancouver Island",
+    "section": "",
+    "text": "Deriving stream networks from a DEM using hydrology tools (Flow Direction, Flow Accumulation, Con, Stream Link, Stream Order, Stream to Feature)\nConverting stream features to routes using linear referencing\nApplying geodatabase topology rules to identify feature intersections\nModelling network barriers using dam and ocean junction points\nBuilding and tracing a network using the Trace Network toolset\nOverlaying route event tables using dynamic segmentation\nQuerying stream segments against multi-condition habitat criteria\nClipping network results to a conservation unit for final mapping"
+  }
+]
