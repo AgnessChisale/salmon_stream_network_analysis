@@ -55,7 +55,7 @@ A stream network was derived from the Vancouver Island DEM using flow direction,
 
 ---
 
-## Skills Learned
+## Techniques
 - Deriving stream networks from a DEM using hydrology tools (Flow Direction, Flow Accumulation, Con, Stream Link, Stream Order, Stream to Feature)
 - Converting stream features to routes using linear referencing
 - Applying geodatabase topology rules to identify feature intersections
