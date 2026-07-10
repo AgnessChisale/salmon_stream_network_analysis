@@ -1,6 +1,4 @@
-# Project 7: Salmon Stream Network Analysis on Vancouver Island
-
-[Github Repo](https://github.com/AgnessChisale/salmon_stream_network_analysis)
+# Salmon Stream Network Analysis on Vancouver Island
 
 ## Overview
 This project models Pacific salmon spawning habitat across Vancouver Island, British Columbia, using hydrological analysis and network tracing in ArcGIS Pro. A stream network was derived from a Digital Elevation Model (DEM), dams were modelled as barriers, and linear referencing was used to characterize stream segments by slope gradient and stream order. The network was then traced from the ocean to identify which stream segments are accessible to salmon and which are blocked by dams, with results filtered against basic habitat requirements.
